@@ -11,14 +11,17 @@ public class Main {
             System.out.println("INPUT LENGTH: " + n);
         }
 
-        setHash set = new setHash();
-        setDictionary dictionary = new setDictionary();
+        setHash set = new setHash(); //Object for Hashset
+        setDictionary dictionary = new setDictionary(); //Object for Hashset
         dictionary.parseFile("input/aliceInWonderlandDictionary.txt");
         set.parseFile("input/input.txt");
 
-        for (String s : set.input) System.out.println(s);
+        //for (String s : set.input) System.out.println(s);  Prints un-split list
+
         dynamicAlgo answer = new dynamicAlgo();
-        answer.splitAlgo(set.input, dictionary.forReading);
+
+        for (String s : set.input)
+            answer.splitAlgo(s, dictionary.forReading);
 
         String[] matches = new String[total]; // literal string matches
         printResults.printAll(total, userStr, matches);

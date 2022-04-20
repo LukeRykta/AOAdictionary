@@ -26,4 +26,8 @@ public class setHash {
             e.printStackTrace();
         }
     }
+
+    public String toString() {
+        return "";
+    }
 }

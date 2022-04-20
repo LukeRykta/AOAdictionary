@@ -9,6 +9,6 @@ public class Main {
 
         for (String s : set.input) System.out.println(s);
         dynamicAlgo answer = new dynamicAlgo();
-        answer.splitAlgo(set.input);
+        answer.splitAlgo(set.input, dictionary.forReading);
     }
 }

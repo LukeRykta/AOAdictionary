@@ -8,7 +8,7 @@ public class dynamicAlgo {
 
     }
 
-    public void splitAlgo(HashSet<String> words){
+    public void splitAlgo(HashSet<String> w, HashSet<String> d){
 
     }
 }

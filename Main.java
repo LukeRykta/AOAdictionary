@@ -6,5 +6,6 @@ public class Main {
         set.parseFile("input/input.txt");
 
         for (String s : set.input) System.out.println(s);
+        new dynamicAlgo();
     }
 }

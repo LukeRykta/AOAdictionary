@@ -7,6 +7,8 @@ public class Main {
 
         for (String arg : args) {
             System.out.println("USER INPUT: " + arg);
+            int n = arg.length(); // length of the input string
+            System.out.println("INPUT LENGTH: " + n);
         }
 
         setHash set = new setHash();

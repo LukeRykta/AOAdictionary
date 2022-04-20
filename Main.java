@@ -5,6 +5,10 @@ public class Main {
         int total = 0; // number of splits
         String userStr = ""; // user input;
 
+        for (String arg : args) {
+            System.out.println("USER INPUT: " + arg);
+        }
+
         setHash set = new setHash();
         setDictionary dictionary = new setDictionary();
         dictionary.parseFile("input/aliceInWonderlandDictionary.txt");

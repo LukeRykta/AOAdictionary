@@ -7,8 +7,7 @@ public class printResults {
             System.out.println(userStr + " can be split into " + total + " AiW word: " + strMatches[0]);
         else // multiple matches
             System.out.println(userStr + " can be split into " + total + " AiW words: ");
-            for (String strMatch : strMatches) {
+            for (String strMatch : strMatches) // appends literal match values
                 System.out.print(strMatch + " ");
-            }
     }
 }

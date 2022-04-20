@@ -2,8 +2,8 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args){
-        int total = 0; // stores number of splits
-        String userStr = ""; // stores user input;
+        int total = 0; // number of splits
+        String userStr = ""; // user input;
 
         setHash set = new setHash();
         setDictionary dictionary = new setDictionary();
@@ -14,7 +14,7 @@ public class Main {
         dynamicAlgo answer = new dynamicAlgo();
         answer.splitAlgo(set.input, dictionary.forReading);
 
-        String[] matches = new String[total];
+        String[] matches = new String[total]; // literal string matches
         printResults.printAll(total, userStr, matches);
     }
 }

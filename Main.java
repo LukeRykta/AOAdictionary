@@ -1,24 +1,20 @@
-import java.util.Iterator;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
-        int total = 0; // number of splits
+        int total = 1; // number of splits
+        ArrayList<String> inputs = new ArrayList<String>(); // each index is a line of input.txt
         int temp = 0;
-        String userStr = ""; // user input;
-
-        for (String arg : args) {
-            System.out.println("USER INPUT: " + arg);
-            int n = arg.length(); // length of the input string
-            System.out.println("INPUT LENGTH: " + n);
-        }
 
         setHash set = new setHash(); //Object for Hashset
         setDictionary dictionary = new setDictionary(); //Object for Hashset
         dictionary.parseFile("input/aliceInWonderlandDictionary.txt");
         set.parseFile("input/input.txt");
 
-        //for (String s : set.input) System.out.println(s);  Prints un-split list
-
+        for (String s : set.input) {
+            //System.out.println(s);
+            inputs.add(s); //store each line of our input.txt to our arraylist to be referenced later
+        }
         dynamicAlgo answer = new dynamicAlgo();
 
         for (String s : set.input) {
@@ -29,6 +25,6 @@ public class Main {
         }
 
         String[] matches = new String[total]; // literal string matches
-        printResults.printAll(total, userStr, matches);
+        printResults.printAll(total, inputs, matches);
     }
 }

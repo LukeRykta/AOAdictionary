@@ -31,7 +31,7 @@ public class dynamicAlgo {
                     c[i][j] = max(c[i-1][j], c[i][j-1]);
             }
         }
-        return c[len][n];
+        return c[len-1][n-1];
     }
 
     public HashSet<String> getSplitList() {

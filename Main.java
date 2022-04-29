@@ -3,6 +3,7 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args){
         int total = 0; // number of splits
+        int temp = 0;
         String userStr = ""; // user input;
 
         for (String arg : args) {
@@ -20,9 +21,12 @@ public class Main {
 
         dynamicAlgo answer = new dynamicAlgo();
 
-        for (String s : set.input)
-            for(String d : dictionary.forReading)
-            answer.splitAlgo(s, d, d.length());
+        for (String s : set.input) {
+            for (String d : dictionary.forReading) {
+                temp = answer.splitAlgo(s, d, d.length());
+                System.out.println("The max number of matches between " + s + " and " + d + " is: " + temp);
+            }
+        }
 
         String[] matches = new String[total]; // literal string matches
         printResults.printAll(total, userStr, matches);

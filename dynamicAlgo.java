@@ -9,17 +9,20 @@ public class dynamicAlgo {
 
     }
 
-    public void splitAlgo(String w, HashSet<String> d){
+    public int max(int a, int b){
+        return 0;
+    }
+
+    public void splitAlgo(String word, String dictWord, int n){
         //Create iterator to iterate to each string in the Hashset
-        for (String s : d) {
-            int n = w.length(); //length of current un-split word
-            int[][] c = new int[n][n]; //nxn character array
-            for(int i = 0; i < n; i++)
-                for(int j = 0; j < n; j++){
+        int len = word.length();
+        int[][] c = new int[len][n];
+        for(int i = 0; i < len; i++){
+            for(int j = 0; j < n; j++){
 
-                }
-
+            }
         }
+
     }
 
     public HashSet<String> getSplitList() {

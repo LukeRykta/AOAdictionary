@@ -21,7 +21,8 @@ public class Main {
         dynamicAlgo answer = new dynamicAlgo();
 
         for (String s : set.input)
-            answer.splitAlgo(s, dictionary.forReading);
+            for(String d : dictionary.forReading)
+            answer.splitAlgo(s, d, d.length());
 
         String[] matches = new String[total]; // literal string matches
         printResults.printAll(total, userStr, matches);

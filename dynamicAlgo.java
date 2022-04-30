@@ -2,13 +2,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class dynamicAlgo {
-
+    private int splitNums;
     //Constructor
     dynamicAlgo(){
 
     }
     public String parseString(String wholeWord, HashSet<String> dictionary){
-        return splitAlgo(wholeWord, new HashMap<String, String>(), dictionary);
+        splitNums = 1;
+        return splitAlgo(wholeWord, new HashMap<>(), dictionary);
     }
 
     public String splitAlgo(String word, HashMap<String, String> newMap, HashSet<String> dictionary){
@@ -26,6 +27,8 @@ public class dynamicAlgo {
             if(rParsed != null){
                 String parsed = lSub + " " + rParsed;
                 newMap.put(word, parsed);
+                splitNums += 1;
+                //System.out.println("Word in map: " + newMap.get(word));
                 return parsed;
             }
         }
@@ -33,4 +36,11 @@ public class dynamicAlgo {
         return null;
     }
 
+    public int getSplitNums() {
+        return splitNums;
+    }
+
+    public void setSplitNums(int splitNums) {
+        this.splitNums = splitNums;
+    }
 }

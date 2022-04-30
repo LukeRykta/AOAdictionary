@@ -12,7 +12,10 @@ public class Main {
 
         for(String s: set.input) {
             printString = answer.parseString(s, dictionary.forReading);
-            System.out.println("The output is: " + printString);
+            if(printString == null)
+                System.out.println(s + " cannot be split into AiW words");
+            else
+                System.out.println(s + " can be split into " + answer.getSplitNums() + " AiW word: " + printString);
         }
 
     }
